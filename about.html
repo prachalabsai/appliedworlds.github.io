@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Applied Worlds</title>
+  <meta name="description" content="About Applied Worlds — the research initiative, its three threads, and the questions it pursues.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ─── Nav ──────────────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Applied Worlds</a>
+    <ul class="nav-links">
+      <li><a href="experiments.html">Experiments</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="notebooks.html">Notebooks</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Page Header ───────────────────────────────────────────────── -->
+<section style="margin-top: 3.5rem;">
+  <div class="container">
+    <span class="eyebrow">About</span>
+    <h1 style="margin-top: 0.85rem; max-width: 20ch;">A personal initiative.<br>No affiliation.<br>No agenda.</h1>
+    <p class="lede">Applied Worlds publishes original, empirical work on simulation, world models, and the dynamics of complex environments. Every artifact begins with a question that has a tractable experimental form.</p>
+  </div>
+</section>
+
+<!-- ─── Mission ───────────────────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <p class="prose">The systems I care about — financial markets, multi-agent environments, physical systems under adaptive control — share a structure: they are non-stationary, partially observable, and endogenously shaped by the agents acting inside them. Modelling them well enough to learn from, plan with, and decide inside is the common problem across all three research threads here.</p>
+    <p class="prose" style="margin-top: 1.25rem;">I approach these questions empirically. A hypothesis gets written, an experiment gets designed, an implementation gets built, and results get published — including the failures. The goal is a public, honest record of what works and what does not, not a curated highlight reel of successes.</p>
+    <p class="prose" style="margin-top: 1.25rem;">Applied Worlds is the Systems leg of a three-site research ecosystem. It connects to Applied Markets — how agents behave in financial environments — and Applied Models — how neural representations form internally. The three questions are complementary: Systems &times; Behavior &times; Intelligence.</p>
+  </div>
+</section>
+
+<!-- ─── Research Threads ──────────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-title">Research Threads</span>
+      <span class="section-count">Three</span>
+    </div>
+
+    <div class="threads-list">
+
+      <div class="thread">
+        <div class="thread-num">01</div>
+        <div class="thread-body">
+          <div class="thread-label">Thread I</div>
+          <h3>World Models</h3>
+          <p>Rooted in the Ha &amp; Schmidhuber line of work, extended. Learning a latent representation of how a system evolves — then dreaming in that space to plan without touching the real environment. The control engineering foundation (state-space representations, stability analysis, dynamical systems) connects here naturally, reframed through modern deep learning and physics-informed neural network architectures developed during CRIS Lab research.</p>
+          <div class="thread-tags">
+            <span class="tag">Latent Dynamics</span>
+            <span class="tag">Dreamer</span>
+            <span class="tag">Physics-Informed Neural Networks</span>
+            <span class="tag">State-Space Models</span>
+            <span class="tag">Model-Based Planning</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="thread">
+        <div class="thread-num">02</div>
+        <div class="thread-body">
+          <div class="thread-label">Thread II</div>
+          <h3>Agent-Environment Dynamics</h3>
+          <p>The feedback loop question. When an agent acts, the environment changes, which changes the agent's next observation, which shapes the agent's next action. In markets this is reflexivity. In multi-agent RL this is non-stationarity — every agent's policy is part of every other agent's environment. In macroeconomics this is the Lucas critique. The convergence of RL work with Agrawal, causal inference training with Bareinboim, and behavioral economics roots from Mu Sigma makes this the densest thread.</p>
+          <div class="thread-tags">
+            <span class="tag">Reflexivity</span>
+            <span class="tag">Multi-Agent RL</span>
+            <span class="tag">Non-Stationarity</span>
+            <span class="tag">Lucas Critique</span>
+            <span class="tag">Emergence</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="thread">
+        <div class="thread-num">03</div>
+        <div class="thread-body">
+          <div class="thread-label">Thread III</div>
+          <h3>Counterfactual Simulation</h3>
+          <p>Simulation is only useful if you can intervene inside it, not just run it forward. Structural causal models provide the formal language for "what if?" — and when encoded as simulable environments, they let you measure whether counterfactual reasoning actually improves decisions compared to purely observational baselines. Connects directly to the Rewire product architecture and to the Bareinboim causal inference curriculum.</p>
+          <div class="thread-tags">
+            <span class="tag">Structural Causal Models</span>
+            <span class="tag">Do-Calculus</span>
+            <span class="tag">Intervention</span>
+            <span class="tag">Counterfactual Reasoning</span>
+            <span class="tag">Decision Quality</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── Why These Questions ───────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-title">Why These Questions</span>
+      <span class="section-count">Context</span>
+    </div>
+    <div class="four-col">
+      <div>
+        <div class="item-label">Engineering</div>
+        <div class="item-title">Control Theory Roots</div>
+        <p class="item-text">An instrumentation and control degree means system dynamics, stability analysis, and state-space thinking are the native language — long before deep learning framed them differently.</p>
+      </div>
+      <div>
+        <div class="item-label">Research</div>
+        <div class="item-title">Physics-Informed ML</div>
+        <p class="item-text">CRIS Lab work on physics-informed neural networks is the direct predecessor — hybrid models that know something about underlying physics rather than learning structure from scratch.</p>
+      </div>
+      <div>
+        <div class="item-label">Inference</div>
+        <div class="item-title">Causal Framework</div>
+        <p class="item-text">Bareinboim's curriculum provided the formal scaffolding for thinking about intervention and counterfactuals as first-class empirical objects, not philosophical speculation.</p>
+      </div>
+      <div>
+        <div class="item-label">Behavior</div>
+        <div class="item-title">Adaptive Environments</div>
+        <p class="item-text">Behavioral economics work at Mu Sigma and quant finance research at Applied Markets surface the same problem from the agent's side: deciding inside a world you are simultaneously shaping.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── What Gets Published ───────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-title">What Gets Published</span>
+      <span class="section-count">Artifact types</span>
+    </div>
+    <div class="four-col">
+      <div>
+        <div class="item-label">Experiments</div>
+        <div class="item-title">Computational Studies</div>
+        <p class="item-text">Implementation, training run, evaluation, results. Reproducible where possible, honest about limitations always.</p>
+      </div>
+      <div>
+        <div class="item-label">Articles</div>
+        <div class="item-title">Analytical Pieces</div>
+        <p class="item-text">Longer-form writing where an experiment alone does not tell the full story. Always grounded in results.</p>
+      </div>
+      <div>
+        <div class="item-label">Notebooks</div>
+        <div class="item-title">Interactive Code</div>
+        <p class="item-text">Executable walkthroughs of methods and implementations. Not tutorials — structured explorations.</p>
+      </div>
+      <div>
+        <div class="item-label">Always</div>
+        <div class="item-title">Failures Included</div>
+        <p class="item-text">Negative results ship alongside positive ones. The record of what was tried is as valuable as what worked.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Editorial Boundary ────────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-title">Editorial Boundary</span>
+      <span class="section-count">Rules</span>
+    </div>
+    <div class="editorial-list">
+      <div class="editorial-item">
+        <span class="rule-label">No Learning Notes</span>
+        <span class="rule-text">Not passive study output. Course notes, reading reflections, and literature summaries do not belong here.</span>
+      </div>
+      <div class="editorial-item">
+        <span class="rule-label">No Reposting</span>
+        <span class="rule-text">No paper summaries, no blog recaps. Every artifact is original work built on direct implementation.</span>
+      </div>
+      <div class="editorial-item">
+        <span class="rule-label">No Tutorials</span>
+        <span class="rule-text">Applied Worlds is not a teaching resource. Every artifact starts with a hypothesis, not an explanation.</span>
+      </div>
+      <div class="editorial-item">
+        <span class="rule-label">Failures Published</span>
+        <span class="rule-text">If the experiment does not work, that is published too. The record is the product.</span>
+      </div>
+      <div class="editorial-item">
+        <span class="rule-label">Keep Moving</span>
+        <span class="rule-text">Progress over optics. There is no content calendar. Artifacts ship when the experiment is done.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Behind the Work ───────────────────────────────────────────── -->
+<section style="margin-bottom: 3rem;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-title">Behind the Work</span>
+    </div>
+    <p class="prose">Applied Worlds is a personal initiative. Other projects from the same desk: <a href="https://prachalabs.com" style="color: var(--accent); text-decoration: underline; text-underline-offset: 3px;">Prachalabs.com</a> — products and tools, including Rewire — and <a href="https://pracha.me" style="color: var(--accent); text-decoration: underline; text-underline-offset: 3px;">Pracha.me</a> — personal site and broader writing.</p>
+  </div>
+</section>
+
+<!-- ─── Footer ───────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Applied Worlds</div>
+      <div class="footer-meta">Part of the Applied research ecosystem</div>
+    </div>
+    <nav class="footer-links">
+      <a href="experiments.html">Experiments</a>
+      <a href="articles.html">Articles</a>
+      <a href="notebooks.html">Notebooks</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

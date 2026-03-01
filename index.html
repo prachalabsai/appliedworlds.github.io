@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Applied Worlds — Simulation, World Models &amp; Environment Dynamics</title>
+  <meta name="description" content="Original empirical research on world models, agent-environment dynamics, and counterfactual simulation.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ─── Nav ──────────────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Applied Worlds</a>
+    <ul class="nav-links">
+      <li><a href="experiments.html">Experiments</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="notebooks.html">Notebooks</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── Hero ─────────────────────────────────────────────────────── -->
+<div class="hero">
+  <div class="hero-inner">
+
+    <div class="hero-left">
+      <span class="eyebrow">Applied Worlds</span>
+      <h1>Simulation,<br>World Models<br>&amp; Environment<br>Dynamics.</h1>
+      <p class="lede">Original, evidence-first research on how environments evolve, how to simulate them faithfully, and how agents learn and decide inside worlds they can never fully model.</p>
+      <div class="hero-cta">
+        <a href="experiments.html" class="btn-primary">Browse Experiments</a>
+        <a href="about.html" class="btn-secondary">Research Threads</a>
+      </div>
+      <div class="signal-bar">
+        <span>Thread I — World Models</span>
+        <span>Thread II — Agent Dynamics</span>
+        <span>Thread III — Counterfactual</span>
+        <span>Launching 2026</span>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-question">
+        <span class="eyebrow">The Question</span>
+        <blockquote>How do we build computational representations of complex environments that are good enough to learn from, plan with, and make decisions in — when the real environment is non-stationary, partially observable, and changes because agents are acting inside it?</blockquote>
+        <ul class="hero-thread-list" style="margin-top: 1.5rem;">
+          <li><span class="tnum">01</span><span class="tname">World Models</span></li>
+          <li><span class="tnum">02</span><span class="tname">Agent-Environment Dynamics</span></li>
+          <li><span class="tnum">03</span><span class="tname">Counterfactual Simulation</span></li>
+        </ul>
+      </div>
+
+      <div class="world-diagram-wrap" style="margin-top: 1.25rem;">
+        <!-- CSS-only world: coordinate axes + environment rings + agent trajectories -->
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Grid lines -->
+          <line x1="0"   y1="100" x2="200" y2="100" stroke="#c8cedd" stroke-width="0.5"/>
+          <line x1="100" y1="0"   x2="100" y2="200" stroke="#c8cedd" stroke-width="0.5"/>
+          <line x1="0"   y1="50"  x2="200" y2="50"  stroke="#dde1ea" stroke-width="0.35"/>
+          <line x1="0"   y1="150" x2="200" y2="150" stroke="#dde1ea" stroke-width="0.35"/>
+          <line x1="50"  y1="0"   x2="50"  y2="200" stroke="#dde1ea" stroke-width="0.35"/>
+          <line x1="150" y1="0"   x2="150" y2="200" stroke="#dde1ea" stroke-width="0.35"/>
+          <!-- Environment rings (outer → inner) -->
+          <circle cx="100" cy="100" r="88" fill="none" stroke="#dde1ea" stroke-width="0.75"/>
+          <circle cx="100" cy="100" r="62" fill="none" stroke="#c8cedd" stroke-width="0.75"/>
+          <circle cx="100" cy="100" r="36" fill="none" stroke="#8aa4e8" stroke-width="0.8" opacity="0.45"/>
+          <!-- World model center -->
+          <circle cx="100" cy="100" r="9"  fill="none" stroke="#2752d8" stroke-width="1.25" opacity="0.55"/>
+          <circle cx="100" cy="100" r="3"  fill="#2752d8" opacity="0.65"/>
+          <!-- Agent 1 (warm) with dashed trajectory -->
+          <circle cx="149" cy="63" r="4" fill="#d45f2e" opacity="0.7"/>
+          <path d="M 149 63 A 62 62 0 0 1 162 100" fill="none" stroke="#d45f2e" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.5"/>
+          <!-- Agent 2 (blue) with dashed trajectory -->
+          <circle cx="57" cy="142" r="3.5" fill="#2752d8" opacity="0.38"/>
+          <path d="M 57 142 A 50 50 0 0 1 100 157" fill="none" stroke="#2752d8" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.35"/>
+          <!-- Axis ticks -->
+          <line x1="97" y1="38"  x2="103" y2="38"  stroke="#c8cedd" stroke-width="0.75"/>
+          <line x1="97" y1="162" x2="103" y2="162" stroke="#c8cedd" stroke-width="0.75"/>
+          <line x1="38" y1="97"  x2="38"  y2="103" stroke="#c8cedd" stroke-width="0.75"/>
+          <line x1="162" y1="97" x2="162" y2="103" stroke="#c8cedd" stroke-width="0.75"/>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ─── At a Glance ───────────────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-title">At a Glance</span>
+      <span class="section-count">Overview</span>
+    </div>
+    <div class="glance-grid">
+      <div class="glance-item">
+        <div class="glance-label">Focus</div>
+        <div class="glance-value">Simulation, World Models &amp; Environment Dynamics</div>
+      </div>
+      <div class="glance-item">
+        <div class="glance-label">Research Threads</div>
+        <div class="glance-value">Three — World Models, Agent Dynamics, Counterfactual Simulation</div>
+      </div>
+      <div class="glance-item">
+        <div class="glance-label">Standard</div>
+        <div class="glance-value">Hypothesis → Experiment → Honest Record</div>
+      </div>
+      <div class="glance-item">
+        <div class="glance-label">Release Pattern</div>
+        <div class="glance-value">Experiments when done. No schedule. No calendar pressure.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Research Threads ──────────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-title">Research Threads</span>
+      <span class="section-count">Three</span>
+    </div>
+
+    <div class="threads-list">
+
+      <div class="thread">
+        <div class="thread-num">01</div>
+        <div class="thread-body">
+          <div class="thread-label">Thread I</div>
+          <h3>World Models</h3>
+          <p>Learning environment dynamics from observation. How do you learn a latent representation of how a system evolves over time? How do you dream in that latent space to plan without acting in the real world? Builds on a control engineering foundation — state-space models, dynamical systems, stability analysis — reimagined through modern deep learning and physics-informed neural networks.</p>
+          <div class="thread-tags">
+            <span class="tag">Latent Dynamics</span>
+            <span class="tag">Physics-Informed ML</span>
+            <span class="tag">Ha &amp; Schmidhuber</span>
+            <span class="tag">State-Space Models</span>
+            <span class="tag">Model-Based Planning</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="thread">
+        <div class="thread-num">02</div>
+        <div class="thread-body">
+          <div class="thread-label">Thread II</div>
+          <h3>Agent-Environment Dynamics</h3>
+          <p>What happens when agents act inside an environment and the environment changes as a result? In markets, it is reflexivity. In multi-agent RL, it is non-stationarity — every agent's policy is part of every other agent's environment. In social systems, it is the Lucas critique. Experiments involve building simulated environments with multiple adaptive agents and studying what emerges from the feedback loop.</p>
+          <div class="thread-tags">
+            <span class="tag">Reflexivity</span>
+            <span class="tag">Multi-Agent RL</span>
+            <span class="tag">Non-Stationarity</span>
+            <span class="tag">Lucas Critique</span>
+            <span class="tag">Emergence</span>
+            <span class="tag">Causal Inference</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="thread">
+        <div class="thread-num">03</div>
+        <div class="thread-body">
+          <div class="thread-label">Thread III</div>
+          <h3>Counterfactual Simulation</h3>
+          <p>Using simulation to answer "what if?" Structural causal models as simulable world models. The experiments involve building environments where you can intervene, not just observe, and measuring whether counterfactual reasoning actually improves decision-making compared to purely observational methods.</p>
+          <div class="thread-tags">
+            <span class="tag">Counterfactuals</span>
+            <span class="tag">Structural Causal Models</span>
+            <span class="tag">Do-Calculus</span>
+            <span class="tag">Intervention</span>
+            <span class="tag">Decision Quality</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── What Gets Published ───────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-title">What Gets Published</span>
+      <span class="section-count">Artifact types</span>
+    </div>
+    <div class="four-col">
+      <div>
+        <div class="item-label">Thread I</div>
+        <div class="item-title">Learned Dynamics</div>
+        <p class="item-text">Training dynamics models, evaluating fidelity, testing model-based planning inside dream environments.</p>
+      </div>
+      <div>
+        <div class="item-label">Thread II</div>
+        <div class="item-title">Multi-Agent Studies</div>
+        <p class="item-text">Building simulated environments with adaptive agents and documenting what emerges from the interaction.</p>
+      </div>
+      <div>
+        <div class="item-label">Thread III</div>
+        <div class="item-title">Counterfactual Reasoning</div>
+        <p class="item-text">Causal simulation versus purely observational methods. Does intervening improve decision quality?</p>
+      </div>
+      <div>
+        <div class="item-label">Across Threads</div>
+        <div class="item-title">Physics-Informed ML</div>
+        <p class="item-text">Hybrid models combining known dynamics with learned components. Environment design studies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Editorial Boundary ────────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-title">Editorial Boundary</span>
+      <span class="section-count">What this is not</span>
+    </div>
+    <div class="editorial-list">
+      <div class="editorial-item">
+        <span class="rule-label">No Learning Notes</span>
+        <span class="rule-text">Not passive study output. If it is not an original experiment, it does not ship.</span>
+      </div>
+      <div class="editorial-item">
+        <span class="rule-label">No Reposting</span>
+        <span class="rule-text">No paper summaries, no blog recaps. Only direct implementation and measurement.</span>
+      </div>
+      <div class="editorial-item">
+        <span class="rule-label">No Tutorials</span>
+        <span class="rule-text">Not an educational resource. Every artifact begins with a hypothesis.</span>
+      </div>
+      <div class="editorial-item">
+        <span class="rule-label">Failures Included</span>
+        <span class="rule-text">Negative results are published alongside successes. The record is the product.</span>
+      </div>
+      <div class="editorial-item">
+        <span class="rule-label">Keep Moving</span>
+        <span class="rule-text">Progress over optics. Completeness over calendar pressure.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Artifact Index ────────────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-title">Artifact Index</span>
+      <span class="section-count">All published work</span>
+    </div>
+    <div class="artifact-filters">
+      <a href="#" class="active">All</a>
+      <a href="#">Experiments</a>
+      <a href="#">Articles</a>
+      <a href="#">Notebooks</a>
+      <a href="#">Thread I</a>
+      <a href="#">Thread II</a>
+      <a href="#">Thread III</a>
+    </div>
+    <table class="artifact-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Type</th>
+          <th>Thread</th>
+          <th>Status</th>
+          <th>Published</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="5">
+            <div class="empty-state">
+              <p>First experiments arriving 2026</p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ─── Footer ───────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Applied Worlds</div>
+      <div class="footer-meta">Part of the Applied research ecosystem</div>
+    </div>
+    <nav class="footer-links">
+      <a href="experiments.html">Experiments</a>
+      <a href="articles.html">Articles</a>
+      <a href="notebooks.html">Notebooks</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
