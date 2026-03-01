@@ -34,8 +34,8 @@
 <!-- ─── Mission ───────────────────────────────────────────────────── -->
 <section>
   <div class="container">
-    <p class="prose">The systems I care about — financial markets, multi-agent environments, physical systems under adaptive control — share a structure: they are non-stationary, partially observable, and endogenously shaped by the agents acting inside them. Modelling them well enough to learn from, plan with, and decide inside is the common problem across all three research threads here.</p>
-    <p class="prose" style="margin-top: 1.25rem;">I approach these questions empirically. A hypothesis gets written, an experiment gets designed, an implementation gets built, and results get published — including the failures. The goal is a public, honest record of what works and what does not, not a curated highlight reel of successes.</p>
+    <p class="prose">Financial markets, multi-agent environments, and physical systems under adaptive control share a common structure: they are non-stationary, partially observable, and endogenously shaped by the agents acting inside them. Building computational representations that are good enough to learn from, plan with, and decide inside is the problem all three research threads address.</p>
+    <p class="prose" style="margin-top: 1.25rem;">Each artifact follows the same structure: a hypothesis, an experiment, an implementation, and a published record of results — including failures. Negative results are published alongside positive ones.</p>
     <p class="prose" style="margin-top: 1.25rem;">Applied Worlds is the Systems leg of a three-site research ecosystem. It connects to Applied Markets — how agents behave in financial environments — and Applied Models — how neural representations form internally. The three questions are complementary: Systems &times; Behavior &times; Intelligence.</p>
   </div>
 </section>
@@ -55,7 +55,7 @@
         <div class="thread-body">
           <div class="thread-label">Thread I</div>
           <h3>World Models</h3>
-          <p>Rooted in the Ha &amp; Schmidhuber line of work, extended. Learning a latent representation of how a system evolves — then dreaming in that space to plan without touching the real environment. The control engineering foundation (state-space representations, stability analysis, dynamical systems) connects here naturally, reframed through modern deep learning and physics-informed neural network architectures developed during CRIS Lab research.</p>
+          <p>Learning a latent representation of how a system evolves — then planning in that space without acting in the real environment. Covers learned dynamics models, physics-informed hybrid architectures that combine known structure with learned components, and model-based planning inside simulated environments.</p>
           <div class="thread-tags">
             <span class="tag">Latent Dynamics</span>
             <span class="tag">Dreamer</span>
@@ -71,7 +71,7 @@
         <div class="thread-body">
           <div class="thread-label">Thread II</div>
           <h3>Agent-Environment Dynamics</h3>
-          <p>The feedback loop question. When an agent acts, the environment changes, which changes the agent's next observation, which shapes the agent's next action. In markets this is reflexivity. In multi-agent RL this is non-stationarity — every agent's policy is part of every other agent's environment. In macroeconomics this is the Lucas critique. The convergence of RL work with Agrawal, causal inference training with Bareinboim, and behavioral economics roots from Mu Sigma makes this the densest thread.</p>
+          <p>When an agent acts, the environment changes — which changes the agent's next observation, which shapes the agent's next action. In markets this is reflexivity. In multi-agent RL this is non-stationarity — every agent's policy is part of every other agent's environment. In macroeconomics this is the Lucas critique. Experiments involve building simulated environments with multiple adaptive agents and studying what emerges from the feedback loop.</p>
           <div class="thread-tags">
             <span class="tag">Reflexivity</span>
             <span class="tag">Multi-Agent RL</span>
@@ -87,7 +87,7 @@
         <div class="thread-body">
           <div class="thread-label">Thread III</div>
           <h3>Counterfactual Simulation</h3>
-          <p>Simulation is only useful if you can intervene inside it, not just run it forward. Structural causal models provide the formal language for "what if?" — and when encoded as simulable environments, they let you measure whether counterfactual reasoning actually improves decisions compared to purely observational baselines. Connects directly to the Rewire product architecture and to the Bareinboim causal inference curriculum.</p>
+          <p>Simulation is only useful if you can intervene inside it, not just run it forward. Structural causal models provide the formal language for "what if?" — and when encoded as simulable environments, they allow measurement of whether counterfactual reasoning improves decisions compared to purely observational baselines.</p>
           <div class="thread-tags">
             <span class="tag">Structural Causal Models</span>
             <span class="tag">Do-Calculus</span>
@@ -102,37 +102,6 @@
   </div>
 </section>
 
-<!-- ─── Why These Questions ───────────────────────────────────────── -->
-<section>
-  <div class="container">
-    <div class="section-header">
-      <span class="section-title">Why These Questions</span>
-      <span class="section-count">Context</span>
-    </div>
-    <div class="four-col">
-      <div>
-        <div class="item-label">Engineering</div>
-        <div class="item-title">Control Theory Roots</div>
-        <p class="item-text">An instrumentation and control degree means system dynamics, stability analysis, and state-space thinking are the native language — long before deep learning framed them differently.</p>
-      </div>
-      <div>
-        <div class="item-label">Research</div>
-        <div class="item-title">Physics-Informed ML</div>
-        <p class="item-text">CRIS Lab work on physics-informed neural networks is the direct predecessor — hybrid models that know something about underlying physics rather than learning structure from scratch.</p>
-      </div>
-      <div>
-        <div class="item-label">Inference</div>
-        <div class="item-title">Causal Framework</div>
-        <p class="item-text">Bareinboim's curriculum provided the formal scaffolding for thinking about intervention and counterfactuals as first-class empirical objects, not philosophical speculation.</p>
-      </div>
-      <div>
-        <div class="item-label">Behavior</div>
-        <div class="item-title">Adaptive Environments</div>
-        <p class="item-text">Behavioral economics work at Mu Sigma and quant finance research at Applied Markets surface the same problem from the agent's side: deciding inside a world you are simultaneously shaping.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ─── What Gets Published ───────────────────────────────────────── -->
 <section>
