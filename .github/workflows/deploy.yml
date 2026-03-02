@@ -33,6 +33,7 @@ jobs:
           cp articles.html dist/
           cp notebooks.html dist/
           cp style.css dist/
+          cp favicon.svg dist/
           cp .nojekyll dist/
           if [ -f CNAME ]; then cp CNAME dist/; fi
 
